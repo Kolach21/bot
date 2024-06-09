@@ -12,3 +12,7 @@ func (c *Commander) Help(inoutMessage *tgbotapi.Message) {
 		log.Fatal(err)
 	}
 }
+
+func init() {
+	registeredCommand["help"] = (*Commander).Help
+}
